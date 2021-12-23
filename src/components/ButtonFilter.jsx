@@ -8,6 +8,8 @@ export default function ButtonFilter() {
     valueFilter,
     numericFilters: { filterByNumericValues },
     setFilterByNumericValues,
+    columnsOptions,
+    setColumnsOptions,
   } = useContext(StarwarsContext);
 
   const handleClick = () => {
@@ -22,6 +24,10 @@ export default function ButtonFilter() {
       ],
     });
   };
+
+  setColumnsOptions(
+    columnsOptions.filter((option) => option !== columnFilter),
+  );
 
   return (
     <button type="button" data-testid="button-filter" onClick={ handleClick }>

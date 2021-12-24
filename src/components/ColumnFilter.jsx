@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import StarwarsContext from '../contexts/PlanetsContext';
+import PlanetsContext from '../contexts/PlanetsContext';
 
 export default function ColumnFilter() {
-  const { columnFilter, setColumnFilter, columnsOptions } = useContext(StarwarsContext);
+  const { columnFilter, setColumnFilter, columnsOptions } = useContext(PlanetsContext);
 
   const handleColumn = ({ target: { value } }) => {
     setColumnFilter(value);

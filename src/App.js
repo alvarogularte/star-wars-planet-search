@@ -1,5 +1,6 @@
 import React from 'react';
 import PlanetsProvider from './providers/PlanetsProvider';
+import Header from './components/Header';
 import Table from './components/Table';
 import FilterInputs from './components/FilterInputs';
 import ColumnFilter from './components/ColumnFilter';
@@ -13,6 +14,7 @@ import './App.css';
 function App() {
   return (
     <PlanetsProvider>
+      <Header />
       <FilterInputs />
       <ColumnFilter />
       <ComparisonFilter />

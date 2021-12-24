@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import StarwarsContext from '../contexts/PlanetsContext';
+import PlanetsContext from '../contexts/PlanetsContext';
 
 export default function ButtonFilter() {
   const {
@@ -10,7 +10,7 @@ export default function ButtonFilter() {
     setFilterByNumericValues,
     columnsOptions,
     setColumnsOptions,
-  } = useContext(StarwarsContext);
+  } = useContext(PlanetsContext);
 
   const handleClick = () => {
     setFilterByNumericValues({
@@ -23,11 +23,10 @@ export default function ButtonFilter() {
         },
       ],
     });
+    setColumnsOptions(
+      columnsOptions.filter((option) => option !== columnFilter),
+    );
   };
-
-  setColumnsOptions(
-    columnsOptions.filter((option) => option !== columnFilter),
-  );
 
   return (
     <button type="button" data-testid="button-filter" onClick={ handleClick }>

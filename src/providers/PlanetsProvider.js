@@ -12,6 +12,7 @@ export default function PlanetsProvider({ children }) {
     'rotation_period',
     'surface_water',
   ]);
+  const [columnFilter, setColumnFilter] = useState('population');
   const [comparisonFilter, setComparisonFilter] = useState('maior que');
   const [valueFilter, setValueFilter] = useState('0');
   const [numericFilters, setFilterByNumericValues] = useState({
